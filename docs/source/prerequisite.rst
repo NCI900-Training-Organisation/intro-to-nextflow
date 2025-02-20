@@ -2,7 +2,6 @@ Prerequisite
 ============
 
 .. important::
- #.  Experience with Python.
  #.  Experience with bash or similar Unix shells.
 
 This workshop assumes that you have experience coding in Python and are familiar with using Unix shell. 

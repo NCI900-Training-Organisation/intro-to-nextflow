@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Name of the Tutorial'
-copyright = '2024, National Computational Infrastructure'
-author = 'Name of the author'
+project = 'Introduction to Nextflow'
+copyright = '2025, National Computational Infrastructure'
+author = 'Joseph John'
 
 release = '0.1'
 version = '0.1.0'

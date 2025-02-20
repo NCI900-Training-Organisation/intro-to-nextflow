@@ -1,4 +1,4 @@
-Working with Numba
+What is Nextflow?
 ------------------
 
 .. admonition:: Overview
@@ -7,92 +7,80 @@ Working with Numba
     * **Tutorial:** 10 min
 
         **Objectives:**
-            #. Learn the how Numba works.
+            #. Learn how Nextflow works.
+
+Nextflow is a powerful workflow automation tool designed for scalable and reproducible data analysis. It simplifies the writing and deployment of complex computational workflows by integrating with multiple execution platforms, including local machines, high-performance computing (HPC) clusters, and cloud environments. Nextflow is widely used in **bioinformatics**, **machine learning**, and **data science** applications where workflow automation is essential.
 
 
-Numba was developed to address the inefficiencies in NumPy use cases. NumPy uses multi-dimensional arrays 
-(ndarrays) for data storage, and operations on these arrays are implemented in C for efficiency. Before Numba, 
-custom efficient computations required writing Python C extensions. Numba is a Just-in-Time (JIT) compiler for 
-CPython that allows users to annotate compute-intensive Python functions for compilation without needing to 
-rewrite the code in C.
+Process-Oriented Workflow Execution
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: ../figs/performance.png
-
-
-Just-in-Time (JIT) Compiler
----------------------------
-
-A Just-in-Time (JIT) compiler in Numba works by dynamically compiling Python code into optimized machine code 
-at runtime, rather than ahead of time. 
-
-.. image:: ../figs/normal_working.png
-.. image:: ../figs/jit_working.png
+Nextflow enables a process-oriented approach to workflow execution, where tasks are defined as 
+independent **processes** that communicate through data channels. Each process runs in an isolated 
+environment, ensuring reproducibility and scalability.
 
 
-Here's a breakdown of how it functions:
+Here's a breakdown of how Nextflow functions:
 
-1. **Annotation and Compilation**: When you use Numba's `@jit` decorator on a Python function, Numba 
-first analyzes the function's code. This analysis determines how to compile the function to improve performance. 
-You can also provide type hints to help Numba generate more efficient machine code.
+1. **Processes and Scripts**: Workflows in Nextflow are composed of multiple **processes**, each defining a computational step. These processes can execute **bash scripts**, **Python scripts**, or any other command-line tool.
 
-2. **Type Inference**: Numba performs type inference on the function’s inputs and outputs. It determines the 
-types of variables and ensures that operations are optimized for those types. For example, it might optimize
-arithmetic operations for specific numerical types.
+2. **Input and Output Channels**: Nextflow uses **channels** to manage data dependencies between processes. Channels define how data flows between tasks, enabling dynamic execution and parallelism.
 
-3. **Machine Code Generation**: Based on the type information and analysis, Numba generates machine code 
-tailored to the function. This code is designed to run directly on the hardware, bypassing the overhead of the 
-Python interpreter.
+3. **Execution on Multiple Platforms**: Nextflow can execute workflows on local machines, clusters, and cloud environments such as AWS Batch, Google Cloud, and Kubernetes without modifying the workflow definition.
 
-4. **Execution**: When the annotated function is called, Numba uses the compiled machine code to execute the 
-function. This process can be significantly faster than executing the original Python code because the machine 
-code is optimized for performance.
+4. **Container Support**: Nextflow seamlessly integrates with **Docker**, **Singularity**, and **Conda**, allowing processes to run in reproducible environments.
 
-5. **Caching**: Numba caches the compiled code for future use. If the function is called again with the same 
-types, Numba can reuse the cached machine code, avoiding recompilation and improving performance further.
+5. **Caching and Resume Feature**: Nextflow caches previously executed steps, making it possible to **resume workflows** without re-running completed processes, which saves time and computing resources.
 
-6. **Fallback and Adaptation**: If Numba encounters code or data types it cannot optimize directly, it will 
-fall back to executing the function in the normal Python interpreter. Numba can adapt over time as more functions
-are annotated and optimized.
+6. **Scalability and Parallelism**: Nextflow automatically schedules tasks in parallel where possible, optimizing workflow execution for large-scale datasets.
 
-Overall, Numba's JIT compilation allows Python code, especially numerical and scientific computations, to run 
-significantly faster by translating it into efficient machine code while maintaining the ease of writing in 
-Python. 
 
-..  code-block:: python
+A Simple Nextflow Script
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: nextflow
     :linenos:
 
-    import numba
-    from numba import jit, int32, prange, vectorize, float64, cuda
+    #!/usr/bin/env nextflow
 
 
-Decorating a function with `@jit` marks it for optimization by Numba's JIT compiler. 
+    process sayHello {
 
-..  code-block:: python
+        output:
+            path 'output.txt'
+
+        script:
+        """
+        echo 'Hello World!' > output.txt
+        """
+    }
+
+    workflow {
+        sayHello()
+    }
+
+This example (`nf_scripts/1_hello_world.nf`) defines a simple **Nextflow workflow** where a process (`sayHello`) generates an 
+`output.txt` file containing the text "Hello World!".
+
+
+Running the Workflow
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To run the script:
+
+.. code-block:: bash
     :linenos:
 
-    @jit
-    def f(x, y):
-        return x + y
+    nextflow run 1_hello_world.nf
 
-.. image:: ../figs/numba_working.png
-
-
-Compilation is deferred until the function is first executed
-
-..  code-block:: python
-    :linenos:
-
-    f(2, 3)
-
-and different function invocations may result in different compilations based on the input types.
-
-..  code-block:: python
-    :linenos:
-
-    f('2', '3')
+This command triggers Nextflow to execute the process and generate the `output.txt` file.
 
 
 .. admonition:: Key Points
    :class: hint
 
-    #. Numba uses simple annonations to parallelise code.
+    #. Nextflow enables scalable, reproducible, and parallel workflow execution.
+    #. Processes are defined as independent tasks that communicate via data channels.
+    #. Nextflow integrates with containers and cloud platforms for seamless execution.
+    #. Caching and resuming features optimize workflow efficiency.
+
