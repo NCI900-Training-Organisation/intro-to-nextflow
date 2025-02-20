@@ -5,6 +5,8 @@ In this tutorial, we'll be using the Gadi HPC system at NCI to run Nextflow work
 
 .. toctree::
     tutorial/intro.rst
+    tutorial/hello.rst
+    tutorial/blocks_directive.rst
 
 
     
