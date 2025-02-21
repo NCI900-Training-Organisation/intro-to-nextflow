@@ -7,7 +7,7 @@ Resume
     * **Tutorial:** 10 min
 
         **Objectives:**
-            #. Learn how to resume a workflow.
+            - Learn how to resume a workflow.
 
 
 
@@ -25,4 +25,4 @@ modified, or reconfigured processes will be re-run, ensuring efficient and incre
 .. admonition:: Key Points
    :class: hint
 
-    #. With `resume` Nextflow will only run processes that you've added or modified since the last run.
+    - With `resume` Nextflow will only run processes that you've added or modified since the last run.

@@ -7,7 +7,7 @@ Variable Inputs
     * **Tutorial:** 15 min
 
         **Objectives:**
-            #. Learn how to use command line inputs.
+            - Learn how to use command line inputs.
 
 
 

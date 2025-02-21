@@ -7,7 +7,7 @@ Hello World
     * **Tutorial:** 10 min
 
         **Objectives:**
-            #. Learn the how to write a minimal NextFlow workflow.
+            - Learn the how to write a minimal NextFlow workflow.
 
 
 This Nextflow script defines a simple workflow that writes "Hello World!" to a file.

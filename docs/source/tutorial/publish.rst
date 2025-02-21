@@ -7,7 +7,7 @@ Publish Outputs
     * **Tutorial:** 10 min
 
         **Objectives:**
-            #. Learn how to use a user specified output directory.
+            - Learn how to use a user specified output directory.
 
 
 
@@ -56,8 +56,8 @@ retrieve.
 Exercise
 ^^^^^^^^^
 
-1. What happens when you change the mode to `link`.
-2. What happens when you change the mode to `move`.
+#. What happens when you change the mode to `link`.
+#. What happens when you change the mode to `move`.
 
 
 .. admonition:: Key Points

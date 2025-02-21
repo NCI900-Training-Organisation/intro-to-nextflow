@@ -7,7 +7,7 @@ What is Nextflow?
     * **Tutorial:** 10 min
 
         **Objectives:**
-            #. Learn how Nextflow works.
+            - Learn how Nextflow works.
 
 Nextflow is a powerful workflow automation tool designed for scalable and reproducible data analysis. It simplifies the writing and deployment of complex computational workflows by integrating with multiple execution platforms, including local machines, high-performance computing (HPC) clusters, and cloud environments. Nextflow is widely used in **bioinformatics**, **machine learning**, and **data science** applications where workflow automation is essential.
 
