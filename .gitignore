@@ -173,5 +173,6 @@ cython_debug/
 # nextflow
 nf_scripts/.nextflow
 nf_scripts/work
+nf_scripts/results
 nf_scripts/.nextflow.log*
 
