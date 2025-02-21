@@ -14,27 +14,28 @@ Contents
 --------
 
 .. list-table:: Topic Covered
-  :widths: 20 20 
-  :header-rows: 1   
- 
-    * - Topics
-      - Duration
-    * - What is Nextflow?
-      - 10 Minutes
-    * - Hello World
-      - 10 Minutes
-    * - Blocks and Directives
-      - 10 Minutes
-    * - Publish Outputs
-      - 10 Minutes
-    * - Variable Inputs
-      - 15 Minutes
-    * - Channels
-      - 15 Minutes
-    * - Multi-step Workflows
-      - 30 Minutes
-    * - Multi-input Process
-      - 15 Minutes
+   :widths: 20 20
+   :header-rows: 1
+
+   * - Topics
+     - Duration
+   * - What is Nextflow?
+     - 10 Minutes
+   * - Hello World
+     - 10 Minutes
+   * - Blocks and Directives
+     - 10 Minutes
+   * - Publish Outputs
+     - 10 Minutes
+   * - Variable Inputs
+     - 15 Minutes
+   * - Channels
+     - 15 Minutes
+   * - Multi-step Workflows
+     - 30 Minutes
+   * - Multi-input Process
+     - 15 Minutes
+
   
   
 
