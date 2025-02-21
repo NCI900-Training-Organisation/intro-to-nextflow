@@ -16,7 +16,7 @@ process sayHello {
     """
 }
 
-params.message = '¡Buenos días!'
+params.message = ['Hello','Bonjour','Holà']
 
 workflow {
 
