@@ -35,6 +35,8 @@ Contents
      - 30 Minutes
    * - Multi-input Process
      - 15 Minutes
+   * - Multi-output Process
+     - 15 Minutes
 
   
   
