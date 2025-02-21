@@ -9,6 +9,7 @@ In this tutorial, we'll be using the Gadi HPC system at NCI to run Nextflow work
     tutorial/blocks_directive.rst
     tutorial/publish.rst
     tutorial/resume.rst
+    tutorial/input.rst
 
 
     
