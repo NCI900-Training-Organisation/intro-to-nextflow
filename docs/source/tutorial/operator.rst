@@ -87,4 +87,5 @@ Exercise
     #. A `channel` enables asynchronous data transfer between processes, supporting parallel execution.  
     #. `Channel.of` allows workflows to accept multiple inputs dynamically.  
     #. Using `-ansi-log false` prevents log overwriting and displays all process logs separately.  
-    #. Unique filenames in `publishDir` prevent output overwrites in the `results/` directory.  
+    #. Unique filenames in `publishDir` prevent output overwrites in the `results/` directory. 
+    #. Using `.view()` helps inspect data at different stages of processing.  
