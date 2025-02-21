@@ -19,17 +19,15 @@ Contents
  
    * - Topics
      - Duration
-   * - ARE Setup
-     - 30 Minutes
-   * - GPU architecture
-     - 30 Minutes
-   * - CuPy Basics
-     - 60 Minutes
-   * - User Kernels
-     - 30 Minutes
-   * - CUDA Events
-     - 15 Minutes
-   * - CUDA Stream
+   * - What is Nextflow?
+     - 10 Minutes
+   * - Hello World
+     - 10 Minutes
+   * - Blocks and Directives
+     - 10 Minutes
+   * - Publish Outputs
+     - 10 Minutes
+   * - Variable Inputs
      - 15 Minutes
   
   
