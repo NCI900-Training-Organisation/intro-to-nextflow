@@ -11,6 +11,7 @@ In this tutorial, we'll be using the Gadi HPC system at NCI to run Nextflow work
     tutorial/resume.rst
     tutorial/input.rst
     tutorial/channel.rst
+    tutorial/multi_step.rst
 
 
     
