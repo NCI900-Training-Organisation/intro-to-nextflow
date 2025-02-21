@@ -2,7 +2,7 @@ Learning Outcomes
 =================
 
 .. note::
- 1.  Learn how to use Nextflow
+    - Learn how to use Nextflow
 
 In this tutorial, we will learn how to use Nextflow to build scalable and reproducible computational 
 workflows. Nextflow is a powerful workflow orchestration tool designed for data-intensive 

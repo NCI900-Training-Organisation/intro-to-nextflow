@@ -31,9 +31,9 @@ Contents
      - 15 Minutes
    * - Channels
      - 15 Minutes
-  * - Multi-step Workflows
+   * - Multi-step Workflows
      - 30 Minutes
-  * - Multi-input Process
+   * - Multi-input Process
      - 15 Minutes
   
   
