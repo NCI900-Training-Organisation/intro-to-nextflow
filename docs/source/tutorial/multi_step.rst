@@ -80,34 +80,16 @@ By default, a process's output is stored in `<process>.out`, so `sayHello.out` c
 as input for `convertToUpper()`.
 
 
-
-.. admonition:: Explanation
-   :class: attention
-
-   The `map()` operator is a versatile tool for transforming channel contents. Here, it is used to extract a specific element from each line of the 
-   input file.
-   
-
 Run the following workflow:
 
 .. code-block:: bash
     :linenos:
 
-    nextflow run 9_csv.nf -ansi-log false
-
-
-
-Exercise
-^^^^^^^^^
-
-- What happens when you use `flatten()` instead of `splitCsv`?
-- What happens when you dont use `map`?
+    nextflow run 10_upper_case.nf
 
 
 .. admonition:: Key Points  
    :class: hint  
 
-   #. Input values can be stored in a file and processed using `Channel.fromPath()`.  
-   #. The `splitCsv()` operator splits CSV-formatted text into an array of values per line.  
-   #. The `map()` operator extracts specific elements from each row for further processing.  
+   #. In Nextflow, multiple computational steps can be combined into a single workflow. 
    
