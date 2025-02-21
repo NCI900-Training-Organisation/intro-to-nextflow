@@ -59,17 +59,27 @@ The `script` directive defines defines the script that runs inside the process. 
     shell script. This ensures that the script is correctly interpreted and formatted.
 
 
-Script Block
+Workflow Block
 ^^^^^^^^^^^^^^^^^^^^
 
 The workflow block defines the execution order of processes. In this script it calls the `sayHello` 
 process, executing it.
 
+
+When you run Nextflow in a directory for the first time, it automatically creates a **`work/`** directory to store all generated files and symlinks during execution.  
+
+Inside the `work/` directory, Nextflow organizes outputs and logs for each process call. For every execution of a process, it creates a uniquely named subdirectory (using a hash) where it:  
+- Stages input files (linked via symlinks by default).  
+- Stores helper files and execution logs.  
+- Writes process output files.  
+
+The path to each process-specific subdirectory is displayed in **truncated form** within square brackets in the console output.
+
 .. admonition:: Key Points
    :class: hint
 
-    #. Nextflow enables scalable, reproducible, and parallel workflow execution.
-    #. Processes are defined as independent tasks that communicate via data channels.
-    #. Nextflow integrates with containers and cloud platforms for seamless execution.
-    #. Caching and resuming features optimize workflow efficiency.
+    #. Process Block defines an independent execution unit (`sayHello`), which runs a script to generate an output file.  
+    #. Directives - The `output` directive specifies that `output.txt` is produced, while the `script` directive contains a shell script to write "Hello World!" into the file.  
+    #. Workflow Block determines execution order by calling `sayHello()`, triggering the process to run.  
+    #. Work Directory - Nextflow creates a `work/` directory, organizing process outputs in uniquely named subdirectories, storing logs, inputs, and outputs.
 
