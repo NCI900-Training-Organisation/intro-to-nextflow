@@ -37,9 +37,10 @@ Contents
      - 15 Minutes
    * - Multi-output Process
      - 15 Minutes
-
-  
-  
+   * - Modules
+     - 15 Minutes
+   * - Total 
+     - 2.5 hours
 
 
 
