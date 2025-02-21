@@ -39,6 +39,12 @@ Run the following workflow:
     nextflow run 15_modules.nf
 
 
+Exercise
+^^^^^^^^^
+
+- Create a new module for `convertToUpper`.
+
+
 .. admonition:: Key Points  
    :class: hint  
 
