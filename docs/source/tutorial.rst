@@ -14,6 +14,7 @@ In this tutorial, we'll be using the Gadi HPC system at NCI to run Nextflow work
     tutorial/multi_step.rst
     tutorial/multi_input.rst
     tutorial/multi_output.rst
+    tutorial/modules.rst
 
 
     
