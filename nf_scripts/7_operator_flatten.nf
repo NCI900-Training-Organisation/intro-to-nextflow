@@ -1,0 +1,33 @@
+#!/usr/bin/env nextflow
+
+process sayHello {
+
+    publishDir 'results', mode: 'copy'
+
+    input:
+        val message
+
+    output:
+        path "${message}-output.txt"
+
+    script:
+    """
+    echo '$message' > '$message-output.txt'
+    """
+}
+
+params.message = '¡Buenos días!'
+
+workflow {
+
+    // declare an array of input greetings
+    message_array = ['Hello','Bonjour','Holà']
+
+        // create a channel for inputs
+    message_ch = Channel.of(message_array)
+                         .flatten()
+
+    // emit a greeting
+    sayHello(message_ch)
+}
+
