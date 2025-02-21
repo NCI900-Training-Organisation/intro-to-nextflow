@@ -29,6 +29,12 @@ Contents
      - 10 Minutes
    * - Variable Inputs
      - 15 Minutes
+   * - Channels
+     - 15 Minutes
+  * - Multi-step Workflows
+     - 30 Minutes
+  * - Multi-input Process
+     - 15 Minutes
   
   
 

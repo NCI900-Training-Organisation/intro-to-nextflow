@@ -4,7 +4,7 @@ Multi-inputs to a Process
 .. admonition:: Overview
    :class: Overview
 
-    * **Tutorial:** 20 min
+    * **Tutorial:** 15 min
 
         **Objectives:**
             - Learn how to manage multiple inputs to a process.
