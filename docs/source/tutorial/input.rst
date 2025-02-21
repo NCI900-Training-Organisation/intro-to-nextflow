@@ -55,6 +55,15 @@ To pass a value from the commandline and run the workflow we use the command:
     nextflow run 3_input.nf --message 'Good Morning!'
 
 
+Exercise
+^^^^^^^^^
+
+- What happens when you dont pass a message?
+
+.. code-block:: bash
+    :linenos:
+
+    nextflow run 3_input.nf 
 
 
 .. admonition:: Key Points
