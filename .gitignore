@@ -175,7 +175,13 @@ nf_scripts/.nextflow
 nf_scripts/work
 nf_scripts/results
 nf_scripts/.nextflow.log*
-
 nf_scripts/*.sif
 nf_scripts/containers
+
+on_gadi/.nextflow
+on_gadi/work
+on_gadi/results
+on_gadi/.nextflow.log*
+
+
 
