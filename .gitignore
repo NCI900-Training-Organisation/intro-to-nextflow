@@ -176,3 +176,6 @@ nf_scripts/work
 nf_scripts/results
 nf_scripts/.nextflow.log*
 
+nf_scripts/*.sif
+nf_scripts/containers
+

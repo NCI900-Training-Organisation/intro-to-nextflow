@@ -1,0 +1,1 @@
+singularity pull cowpy.sif docker://community.wave.seqera.io/library/cowpy:1.1.5--3db457ae1977a273
